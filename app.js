@@ -42,6 +42,8 @@ app.use((req, res) => {
 
 app.use(errorHandler);
 
+console.log("Hello Git");
+
 /* app.listen(process.env.PORT); */
 
 module.exports = app;
