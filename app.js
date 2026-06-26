@@ -14,6 +14,12 @@ const app = express();
 app.use(express.json());
 app.use(logger);
 
+app.get("/health", (req, res) => {
+  res.json({
+    status: "ok",
+  });
+});
+
 const adminRoutes = require("./routes/adminRoutes");
 app.use("/admin", adminRoutes);
 
